@@ -50,20 +50,20 @@ input_data = pd.DataFrame({
 })
 
 # Load model
-try:
-    model = joblib.load("model_heart_disease.pkl")
-except FileNotFoundError:
-    st.error("Model tidak ditemukan. Harap unggah model_heart_disease.pkl terlebih dahulu.")
-    model = None
+# try:
+#     model = joblib.load("model_heart_disease.pkl")
+# except FileNotFoundError:
+#     st.error("Model tidak ditemukan. Harap unggah model_heart_disease.pkl terlebih dahulu.")
+#     model = None
 
-# Prediction
-if st.button("Prediksi"):
-    if model:
-        prediction = model.predict(input_data)[0]
-        st.header("Hasil Prediksi")
-        if prediction == 1:
-            st.error("Pasien mungkin memiliki risiko penyakit jantung.")
-        else:
-            st.success("Pasien kemungkinan tidak memiliki risiko penyakit jantung yang signifikan.")
-    else:
-        st.error("Model belum siap digunakan.")
+# # Prediction
+# if st.button("Prediksi"):
+#     if model:
+#         prediction = model.predict(input_data)[0]
+#         st.header("Hasil Prediksi")
+#         if prediction == 1:
+#             st.error("Pasien mungkin memiliki risiko penyakit jantung.")
+#         else:
+#             st.success("Pasien kemungkinan tidak memiliki risiko penyakit jantung yang signifikan.")
+#     else:
+#         st.error("Model belum siap digunakan.")
