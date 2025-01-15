@@ -115,3 +115,5 @@ Melatih model machine learning Logistic Regression dan K-Nearest Neighbor (KNN) 
 ## Referensi
 
 - [Heart Disease Prediction with Logistic Regression and KNN](https://github.com/RizkyAdhiNugroho/heart-disease-prediction-with-Logistic-Regression-KNN)
+
+- link Streamlit (https://data-mining-prediksi-penyakit-jantung-menggunakan-logistik-reg.streamlit.app/)
