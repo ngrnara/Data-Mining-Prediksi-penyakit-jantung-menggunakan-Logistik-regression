@@ -1,6 +1,8 @@
-numpy
+numpy==2.1.2
 matplotlib
-pandas
+pandas==2.2.3
 seaborn
 scikit-learn
 streamlit
+pickle
+pip==24.2
