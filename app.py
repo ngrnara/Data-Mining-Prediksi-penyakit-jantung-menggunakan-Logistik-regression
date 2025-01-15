@@ -8,7 +8,9 @@ from sklearn.metrics import accuracy_score, classification_report
 import joblib
 
 # Judul aplikasi
-st.title("Aplikasi Prediksi Penyakit Jantung untuk Praktisi Kesehatan")
+st.title("Prediksi Penyakit Jantung Menggunakan Logistic Regression")
+
+st.write("Penyakit jantung adalah salah satu penyebab utama kematian di seluruh dunia. Prediksi risiko penyakit jantung secara dini dapat membantu dalam pengambilan keputusan medis yang tepat waktu.")
 
 st.write("Aplikasi ini dirancang untuk membantu praktisi kesehatan dalam memprediksi kemungkinan seorang pasien terindikasi penyakit jantung berdasarkan data medis yang tersedia.")
 
