@@ -14,40 +14,40 @@ st.write("Aplikasi ini dirancang untuk membantu praktisi kesehatan dalam mempred
 
 st.header("Input Data Pasien")
 
-# Input data pasien
-age = st.number_input("Umur", min_value=1, max_value=120, value=30)
-sex = st.selectbox("Jenis Kelamin", ["Laki-laki", "Perempuan"])
-chest_pain = st.selectbox("Jenis Nyeri Dada", ["Angina Stabil", "Angina Tidak Stabil", "Asimptomatik", "Nyeri Dada Lainnya"])
-resting_bp = st.number_input("Tekanan Darah Saat Istirahat (mmHg)", min_value=50, max_value=200, value=120)
-cholesterol = st.number_input("Kolesterol (mg/dL)", min_value=100, max_value=400, value=200)
-fasting_bs = st.selectbox("Gula Darah Puasa (> 120 mg/dL)", ["Ya", "Tidak"])
-resting_ecg = st.selectbox("Hasil EKG Saat Istirahat", ["Normal", "Kelainan Gelombang ST", "Hipertrofi Ventrikel Kiri"])
-max_hr = st.number_input("Detak Jantung Maksimum", min_value=60, max_value=220, value=100)
-exercise_angina = st.selectbox("Angina Selama Latihan", ["Ya", "Tidak"])
-oldpeak = st.number_input("Depresi ST (Oldpeak)", min_value=0.0, max_value=10.0, value=0.0)
-st_slope = st.selectbox("Kemiringan Segmen ST", ["Meningkat", "Datar", "Menurun"])
+# # Input data pasien
+# age = st.number_input("Umur", min_value=1, max_value=120, value=30)
+# sex = st.selectbox("Jenis Kelamin", ["Laki-laki", "Perempuan"])
+# chest_pain = st.selectbox("Jenis Nyeri Dada", ["Angina Stabil", "Angina Tidak Stabil", "Asimptomatik", "Nyeri Dada Lainnya"])
+# resting_bp = st.number_input("Tekanan Darah Saat Istirahat (mmHg)", min_value=50, max_value=200, value=120)
+# cholesterol = st.number_input("Kolesterol (mg/dL)", min_value=100, max_value=400, value=200)
+# fasting_bs = st.selectbox("Gula Darah Puasa (> 120 mg/dL)", ["Ya", "Tidak"])
+# resting_ecg = st.selectbox("Hasil EKG Saat Istirahat", ["Normal", "Kelainan Gelombang ST", "Hipertrofi Ventrikel Kiri"])
+# max_hr = st.number_input("Detak Jantung Maksimum", min_value=60, max_value=220, value=100)
+# exercise_angina = st.selectbox("Angina Selama Latihan", ["Ya", "Tidak"])
+# oldpeak = st.number_input("Depresi ST (Oldpeak)", min_value=0.0, max_value=10.0, value=0.0)
+# st_slope = st.selectbox("Kemiringan Segmen ST", ["Meningkat", "Datar", "Menurun"])
 
-# Mapping inputs to model format
-# Pastikan LabelEncoder sudah dibuat untuk fitur-fitur kategorikal
-label_encoders = {
-    "ChestPainType": LabelEncoder().fit(["Angina Stabil", "Angina Tidak Stabil", "Asimptomatik", "Nyeri Dada Lainnya"]),
-    "RestingECG": LabelEncoder().fit(["Normal", "Kelainan Gelombang ST", "Hipertrofi Ventrikel Kiri"]),
-    "ST_Slope": LabelEncoder().fit(["Meningkat", "Datar", "Menurun"])
-}
+# # Mapping inputs to model format
+# # Pastikan LabelEncoder sudah dibuat untuk fitur-fitur kategorikal
+# label_encoders = {
+#     "ChestPainType": LabelEncoder().fit(["Angina Stabil", "Angina Tidak Stabil", "Asimptomatik", "Nyeri Dada Lainnya"]),
+#     "RestingECG": LabelEncoder().fit(["Normal", "Kelainan Gelombang ST", "Hipertrofi Ventrikel Kiri"]),
+#     "ST_Slope": LabelEncoder().fit(["Meningkat", "Datar", "Menurun"])
+# }
 
-input_data = pd.DataFrame({
-    "Age": [age],
-    "Sex": [1 if sex == "Laki-laki" else 0],
-    "ChestPainType": [label_encoders["ChestPainType"].transform([chest_pain])[0]],
-    "RestingBP": [resting_bp],
-    "Cholesterol": [cholesterol],
-    "FastingBS": [1 if fasting_bs == "Ya" else 0],
-    "RestingECG": [label_encoders["RestingECG"].transform([resting_ecg])[0]],
-    "MaxHR": [max_hr],
-    "ExerciseAngina": [1 if exercise_angina == "Ya" else 0],
-    "Oldpeak": [oldpeak],
-    "ST_Slope": [label_encoders["ST_Slope"].transform([st_slope])[0]]
-})
+# input_data = pd.DataFrame({
+#     "Age": [age],
+#     "Sex": [1 if sex == "Laki-laki" else 0],
+#     "ChestPainType": [label_encoders["ChestPainType"].transform([chest_pain])[0]],
+#     "RestingBP": [resting_bp],
+#     "Cholesterol": [cholesterol],
+#     "FastingBS": [1 if fasting_bs == "Ya" else 0],
+#     "RestingECG": [label_encoders["RestingECG"].transform([resting_ecg])[0]],
+#     "MaxHR": [max_hr],
+#     "ExerciseAngina": [1 if exercise_angina == "Ya" else 0],
+#     "Oldpeak": [oldpeak],
+#     "ST_Slope": [label_encoders["ST_Slope"].transform([st_slope])[0]]
+# })
 
 # Load model
 # try:
