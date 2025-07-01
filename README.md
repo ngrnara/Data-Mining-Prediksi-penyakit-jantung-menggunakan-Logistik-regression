@@ -4,7 +4,6 @@
 
 - **Nama**: Narakarti Nugraha  
 - **NIM**: A11.2024.15787  
-- **Kelompok**: A11.4519
 
 ---
 
@@ -112,7 +111,7 @@ Melatih model machine learning Logistic Regression dan K-Nearest Neighbor (KNN) 
 
 [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
 
-## Referensi
+## link deploy streamlit
 
 - [Heart Disease Prediction with Logistic Regression and KNN](https://github.com/RizkyAdhiNugroho/heart-disease-prediction-with-Logistic-Regression-KNN)
 
